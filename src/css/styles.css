@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  list-style: none;
 }
 
 body {
@@ -17,4 +18,25 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+}
+.country-info__head {
+  margin-left: 40px;
+}
+.country-info__name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.country-info__item {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.country-list__item {
+  display: flex;
+  justify-content: start;
+}
+.country-list__name {
+  margin: 10px;
 }
