@@ -15,13 +15,13 @@ export const refs = {
 refs.searhBox.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
 
 function onSearch({ target: { value } }) {
-  const trimmedValue = value.trim();
+  const trimValue = value.trim();
 
-  if (!trimmedValue) {
+  if (!trimValue) {
     return;
   }
 
-  fetchCountries(trimmedValue).then(render).catch(errorHandler);
+  fetchCountries(trimValue).then(render).catch(errorHandler);
 }
 
 function errorHandler(error) {
