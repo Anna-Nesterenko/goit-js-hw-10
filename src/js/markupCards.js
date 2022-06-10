@@ -8,9 +8,10 @@ export function createMarkupCard(countries) {
         flags: { svg },
         languages,
       } = country;
-      const languagesStr = Object.values(languages).join(',');
 
-      return `<div class="country-info__head"><img src="${svg}" alt="${official}" width=80>
+      const languagesStr = Object.values(languages);
+
+      return `<div class="country-info__head"><img src="${svg}" alt="${official}" width=100>
       <p class="country-info__name">${official}</p></div>
         <ul class="country-info__list">
           <li class="country-info__item"><span>Capital: </span>${capital}</li>
@@ -26,7 +27,7 @@ export function createMarkupList(countries) {
     .map(
       ({ name: { official }, flags: { svg } }) =>
         `<li class="country-list__item" data-item="${official}">
-          <img src="${svg}" alt="${official}" width=50 >
+          <img src="${svg}" alt="${official}" width=70 >
           <p class="country-list__name">${official}</p>
         </li>`
     )
